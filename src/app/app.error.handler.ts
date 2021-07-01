@@ -1,5 +1,5 @@
 export class  ErrorHandler{
-  static handleError(error: Response any) {
+  // static handleError(error: Response any) {
   
-  }
+  // }
 }
