@@ -14,6 +14,6 @@ export class RestaurantsService {
     restaurants(): Observable<Restaurant[]> {
         return this.http.get(`${MEAT_API}/restaurants`)
         .map(response => response.json())
-        
+        //teste de envio
     }
 }
