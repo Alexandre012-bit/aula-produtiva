@@ -29,15 +29,23 @@
               {{ restaurant?.about }}
             </dd>
             <dt>Horários</dt>
-            <dd>Funciona de segunda à sexta, de 8h às 23h</dd>
+            <dd>{{ restaurant?.hours }}</dd>
           </dl>
         </div>
         <!-- /.box-body -->
         <div class="box-footer detail-footer">
-          <a class="pull-left detail-active" href="detail-restaurant.html">
+          <a
+            class="pull-left"
+            routerLinkActive="detail-active"
+            [routerLink]="['menu']"
+          >
             Menu
           </a>
-          <a class="pull-right" href="detail-restaurant-reviews.html">
+          <a
+            class="pull-right"
+            routerLinkActive="detail-active"
+            [routerLink]="['reviews']"
+          >
             Avaliações
           </a>
         </div>
@@ -47,60 +55,6 @@
   </div>
 
   <div class="row">
-    <!--INÍCIO DO MENU -->
-    <div class="col-md-9 col-xs-12">
-      <div class="menu-item-info-box">
-        <span class="menu-item-info-box-icon"
-          ><img src="assets/img/foods/cupcake.png"
-        /></span>
-
-        <div class="menu-item-info-box-content">
-          <span class="menu-item-info-box-text">Cup Cake</span>
-          <span class="menu-item-info-box-detail"
-            >Cup Cake recheado de Doce de Leite</span
-          >
-          <span class="menu-item-info-box-price">R$ 10,00</span>
-          <a class=""><i class="fa fa-plus-circle"></i> Adicionar</a>
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-
-      <div class="menu-item-info-box">
-        <span class="menu-item-info-box-icon"
-          ><img src="assets/img/foods/donut.png"
-        /></span>
-
-        <div class="menu-item-info-box-content">
-          <span class="menu-item-info-box-text">Donut</span>
-          <span class="menu-item-info-box-detail">Coberto com chantilly</span>
-          <span class="menu-item-info-box-price">R$ 10,00</span>
-          <a class=""><i class="fa fa-plus-circle"></i> Adicionar</a>
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-
-      <div class="menu-item-info-box">
-        <span class="menu-item-info-box-icon"
-          ><img src="assets/img/foods/croissant.png"
-        /></span>
-
-        <div class="menu-item-info-box-content">
-          <span class="menu-item-info-box-text">Croissant</span>
-          <span class="menu-item-info-box-detail"
-            >Recheado com queijo e presunto</span
-          >
-          <span class="menu-item-info-box-price">R$ 10,00</span>
-          <a class=""><i class="fa fa-plus-circle"></i> Adicionar</a>
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-    </div>
-    <div class="col-md-3 col-xs-12">
-      <mt-shopping-cart></mt-shopping-cart>
-    </div>
-    <!-- FIM DO MENU -->
+    <router-outlet></router-outlet>
   </div>
 </section>

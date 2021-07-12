@@ -6,6 +6,7 @@ export interface Restaurant {
    rating:number
    imagePath:string
    about:string
+   hours:string
    /* "id": "bread-bakery",
       "name": "Bread & Bakery",
       "category": "Bakery",
